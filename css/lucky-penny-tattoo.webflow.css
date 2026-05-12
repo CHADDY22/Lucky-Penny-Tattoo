@@ -1,0 +1,760 @@
+@font-face {
+  font-family: Excalibur Nouveau;
+  src: url('../fonts/Excalibur-Nouveau.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --orange: #ff7400;
+  --tan: #fbe3b9;
+  --green-brown: #8e6f2b;
+  --yellow: #ffae00;
+}
+
+.page-layout {
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: 900px;
+  max-height: 100vh;
+  display: flex;
+}
+
+.photo-sidebar {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  border-right: 10px solid var(--orange);
+  background-color: #b0b5bf;
+  flex-flow: column;
+  min-width: 28vw;
+  max-width: 28vw;
+  padding: 20px;
+  display: flex;
+  overflow: scroll;
+}
+
+.center-column {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  object-fit: fill;
+  flex-flow: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 61px 10px 60px;
+  display: flex;
+  position: relative;
+  overflow: scroll;
+}
+
+.center-column.home, .center-column.artists, .center-column.contact {
+  overflow: visible;
+}
+
+.logo-column {
+  background-image: url('../images/stripe.avif');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-self: auto;
+  align-items: center;
+  min-width: 32vw;
+  height: auto;
+  display: flex;
+}
+
+.logo-column.mobile {
+  display: none;
+}
+
+.nav-link {
+  margin-top: -3px;
+  padding-right: 85px;
+}
+
+.nav-link:hover {
+  background-image: url('../images/ezgif.com-animated-gif-maker-3.gif');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 59px;
+  padding-right: 85px;
+}
+
+.nav-link.faq {
+  margin-top: -19px;
+}
+
+.nav-link.artists {
+  margin-top: 20px;
+}
+
+.image {
+  width: 400px;
+}
+
+.div-block {
+  border: 5px solid var(--orange);
+  background-image: url('../images/70s-pattern-12x.avif'), linear-gradient(to bottom, var(--tan), var(--tan));
+  background-position: 0 0, 0 0;
+  background-size: 120px, auto;
+  flex-flow: column;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+}
+
+.image-2, .image-3 {
+  border: 2px solid var(--tan);
+  border-radius: 15px;
+  flex: none;
+}
+
+.image-4, .image-5 {
+  border: 2px solid var(--orange);
+  border-radius: 15px;
+  flex: none;
+}
+
+.text-block {
+  border: 3px solid var(--orange);
+  background-color: var(--tan);
+  width: 80%;
+  color: var(--green-brown);
+  align-self: center;
+  padding: 10px;
+  font-family: Excalibur Nouveau, Verdana, sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  position: relative;
+  left: 0;
+}
+
+.body {
+  background-color: var(--green-brown);
+  background-image: url('../images/paper-texture-overlay.avif');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.div-block-2 {
+  position: absolute;
+  inset: auto 0% 0%;
+}
+
+.contact-nav-item {
+  padding-right: 0;
+}
+
+.image-6 {
+  border: 2px solid var(--orange);
+  border-radius: 15px;
+  flex: none;
+}
+
+.image-10 {
+  max-width: 90%;
+}
+
+.div-block-3 {
+  display: none;
+}
+
+.artist-name {
+  color: var(--tan);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-family: Excalibur Nouveau, Verdana, sans-serif;
+  font-size: 70px;
+  line-height: 70px;
+  text-decoration: none;
+}
+
+.artist-name.header {
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.text-block-2 {
+  color: var(--tan);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  font-family: Excalibur Nouveau, Verdana, sans-serif;
+  font-size: 41px;
+  line-height: 41px;
+}
+
+.artist-pic {
+  border: 3px solid var(--yellow);
+  mix-blend-mode: normal;
+  object-fit: cover;
+  width: 90%;
+  height: 425px;
+}
+
+.artist-pic.rachel {
+  height: 463px;
+}
+
+.text-block-3 {
+  color: var(--tan);
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: Excalibur Nouveau, Verdana, sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.image-21 {
+  width: 50px;
+}
+
+.link-block {
+  margin-top: 20px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.text-span {
+  font-family: Bitter, serif;
+}
+
+.link-2 {
+  color: var(--orange);
+}
+
+.text-span-3 {
+  font-family: Bitter, serif;
+}
+
+.link-4, .link-5 {
+  color: var(--orange);
+}
+
+.text-span-4, .link-6 {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.text-span-5 {
+  color: var(--yellow);
+  font-size: 30px;
+}
+
+.link-7, .link-8 {
+  color: var(--orange);
+}
+
+.text-span-6, .text-span-7, .text-span-8, .text-span-9 {
+  color: var(--yellow);
+  font-size: 30px;
+}
+
+.link-9 {
+  color: var(--orange);
+}
+
+.image-25 {
+  align-self: center;
+  width: 50px;
+}
+
+.contact-header {
+  color: var(--yellow);
+  margin-top: 20px;
+  font-family: Excalibur Nouveau, Verdana, sans-serif;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.text-block-6 {
+  color: var(--tan);
+  font-family: Excalibur Nouveau, Verdana, sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.link-10 {
+  color: var(--orange);
+}
+
+.image-26 {
+  align-self: center;
+  width: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  .photo-sidebar {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 28vw;
+    padding: 10px;
+    display: flex;
+  }
+
+  .center-column {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .logo-column {
+    background-repeat: repeat-y;
+    background-size: 50px;
+    align-self: auto;
+    min-width: 21vw;
+    height: auto;
+    position: relative;
+  }
+
+  .nav-link {
+    height: auto;
+    margin-top: 0;
+    padding-right: 68px;
+  }
+
+  .nav-link:hover {
+    background-size: auto 60px;
+  }
+
+  .nav-link.faq {
+    margin-top: -4px;
+  }
+
+  .nav-link.aftercare {
+    padding-right: 0;
+  }
+
+  .nav-link.aftercare:hover {
+    background-image: none;
+    background-repeat: repeat;
+    background-size: auto;
+    padding-right: 0;
+  }
+
+  .image {
+    width: 250px;
+    margin-top: 40px;
+  }
+
+  .div-block {
+    width: 275px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .text-block {
+    width: 100%;
+    font-size: 21px;
+  }
+
+  .contact-nav-item {
+    object-fit: contain;
+    height: 100px;
+  }
+
+  .image-7 {
+    object-fit: cover;
+    height: 100px;
+  }
+
+  .image-8 {
+    object-fit: cover;
+    height: 98px;
+  }
+
+  .image-9 {
+    object-fit: contain;
+    height: 100px;
+  }
+
+  .image-10 {
+    max-width: 100%;
+    height: 100px;
+  }
+
+  .image-11 {
+    height: 100px;
+  }
+
+  .image-20 {
+    width: 300px;
+  }
+
+  .image-21 {
+    width: 50px;
+  }
+
+  .link-block {
+    position: static;
+    inset: auto auto 0% 0%;
+  }
+
+  .image-25 {
+    width: 25px;
+    display: none;
+  }
+
+  .text-block-6 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-layout {
+    justify-content: space-between;
+    align-items: stretch;
+    max-height: none;
+  }
+
+  .photo-sidebar {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    min-width: 100px;
+    max-width: 225px;
+    padding: 10px;
+    overflow: visible;
+  }
+
+  .center-column {
+    display: none;
+  }
+
+  .logo-column {
+    background-repeat: repeat-y;
+    background-size: 50px;
+    display: none;
+  }
+
+  .logo-column.mobile {
+    flex: 1;
+    min-width: auto;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .div-block {
+    order: 9999;
+    margin-top: 20px;
+  }
+
+  .image-12 {
+    order: -9999;
+  }
+
+  .image-22 {
+    width: 225px;
+  }
+
+  .image-22.mobile {
+    width: 200px;
+  }
+
+  .image-22.mobile.contact {
+    width: 255px;
+    margin-right: -19px;
+  }
+
+  .image-22.mobile.aftercare {
+    width: 300px;
+  }
+
+  .mobile-artist-page-content {
+    width: 95%;
+    text-shadow: 0 5px 0 var(--orange);
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+  }
+
+  .text-block-4 {
+    color: var(--tan);
+    text-align: center;
+    text-shadow: 0 5px 0 var(--green-brown);
+    font-family: Excalibur Nouveau, Verdana, sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .image-23 {
+    border: 3px solid var(--yellow);
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .text-block-5 {
+    border: 3px solid var(--yellow);
+    background-color: var(--tan);
+    color: var(--green-brown);
+    text-shadow: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: Excalibur Nouveau, Verdana, sans-serif;
+    font-size: 25px;
+    line-height: 27px;
+  }
+
+  .text-block-5.aftercare {
+    margin-bottom: 40px;
+  }
+
+  .link-block-2 {
+    margin-top: 40px;
+  }
+
+  .link {
+    color: var(--orange);
+  }
+
+  .text-span-2 {
+    font-family: Bitter, serif;
+  }
+
+  .link-3 {
+    color: var(--orange);
+  }
+
+  .image-24 {
+    width: 102px;
+  }
+
+  .text-span-5, .text-span-6, .text-span-7, .text-span-8, .text-span-9 {
+    color: var(--orange);
+  }
+
+  .image-25 {
+    width: 50px;
+    display: block;
+  }
+
+  .contact-header {
+    margin-top: 40px;
+  }
+
+  .div-block-4 {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+  }
+
+  .shop-mobile {
+    border: 3px solid var(--orange);
+    background-image: url('../images/70s-pattern-12x.avif');
+    background-position: 0 0;
+    background-size: 80px;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .text-block-7 {
+    border: 3px solid var(--orange);
+    background-color: var(--tan);
+    color: var(--green-brown);
+    text-shadow: none;
+    padding: 10px;
+    font-family: Excalibur Nouveau, Verdana, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .div-block-5 {
+    border: 4px solid var(--orange);
+    background-color: var(--tan);
+    text-align: center;
+    flex-flow: column;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+  }
+
+  .text-block-8 {
+    color: var(--green-brown);
+    font-family: Excalibur Nouveau, Verdana, sans-serif;
+    font-size: 56px;
+    line-height: 65px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .page-wrapper {
+    position: relative;
+  }
+
+  .page-layout {
+    flex-flow: column;
+  }
+
+  .photo-sidebar {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    border-top: 5px solid var(--orange);
+    border-right-style: none;
+    min-width: auto;
+    max-width: none;
+    padding: 20px;
+  }
+
+  .logo-column.mobile {
+    order: -9999;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    padding-bottom: 100px;
+  }
+
+  .image {
+    width: 300px;
+  }
+
+  .div-block {
+    background-position: 50% 0;
+    width: 81vw;
+    margin-top: 40px;
+  }
+
+  .text-block {
+    width: 100%;
+    margin-left: 0;
+    font-size: 6.5vw;
+  }
+
+  .body {
+    background-position: 50%;
+    background-size: cover;
+  }
+
+  .image-12 {
+    order: -9999;
+    max-width: 90%;
+    margin-top: 10px;
+  }
+
+  .image-13, .image-14 {
+    height: 100px;
+  }
+
+  .image-15 {
+    height: 96px;
+  }
+
+  .image-16 {
+    height: 129px;
+  }
+
+  .image-17 {
+    height: 131px;
+  }
+
+  .image-18 {
+    height: 100px;
+  }
+
+  .div-block-3 {
+    display: block;
+    position: fixed;
+    inset: auto 10px 10px auto;
+  }
+
+  .image-19 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .image-22.mobile.shop {
+    width: 175px;
+  }
+
+  .mobile-artist-page-content {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    display: flex;
+  }
+
+  .text-block-4 {
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-23 {
+    width: 90vw;
+  }
+
+  .text-block-5 {
+    width: 90vw;
+    color: var(--green-brown);
+    text-shadow: none;
+    font-size: 23px;
+  }
+
+  .text-block-5.aftercare {
+    width: 95vw;
+  }
+
+  .link {
+    color: var(--orange);
+  }
+
+  .link-6 {
+    word-break: break-all;
+  }
+
+  .text-span-10 {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  }
+
+  .shop-mobile {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .link-11 {
+    color: var(--orange);
+  }
+
+  .div-block-5 {
+    border: 3px solid var(--orange);
+    background-color: var(--tan);
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+@font-face {
+  font-family: 'Excalibur Nouveau';
+  src: url('../fonts/Excalibur-Nouveau.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
