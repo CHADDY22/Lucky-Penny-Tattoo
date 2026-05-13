@@ -48,8 +48,12 @@
   overflow: scroll;
 }
 
-.center-column.home, .center-column.artists, .center-column.contact {
+.center-column.home, .center-column.artists {
   overflow: visible;
+}
+
+.center-column.contact {
+  overflow: scroll;
 }
 
 .logo-column {
